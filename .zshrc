@@ -25,7 +25,7 @@ export NVM_DIR="$HOME/.nvm"
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 

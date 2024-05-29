@@ -1,6 +1,8 @@
 vim.g.mapleader = " "
 
-local mapper = function(mode, key, result, desc) vim.keymap.set(mode, key, result, { noremap = true, silent = true, desc = desc }) end
+local mapper = function(mode, key, result, desc)
+    vim.keymap.set(mode, key, result, { noremap = true, silent = true, desc = desc })
+end
 
 mapper("i", "jk", "<ESC>", "Exit insert mode with jk")
 
@@ -30,5 +32,9 @@ mapper("n", "<C-e>", "3<C-e>", "Scroll down more quickly")
 mapper("n", "<C-y>", "3<C-y>", "Scroll up more quickly")
 
 -- toggles a mini tmux pane
--- TODO: add the script to this repository 
-mapper('n', '<leader>tt', ':silent! !~/dev/tmux/collapsable_mini_tmux_pane.sh<CR>')
+-- TODO: add the script to this repository
+mapper("n", "<leader>tt", ":silent! !~/dev/tmux/collapsable_mini_tmux_pane.sh<CR>")
+
+mapper("i", "<F3>", "<C-c>:", "Exit insert mode and enter command mode")
+mapper("n", "<F3>", "<C-c>:", "Enter command mode")
+mapper("x", "<F3>", "<C-c>:", "Enter command mode")

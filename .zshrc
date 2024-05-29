@@ -14,7 +14,7 @@ alias gaa="git add ."
 alias gcm='git commit -m'
 
 alias hc='sh /Users/pedroknup/dev/personal/health-check.sh'
-alias nvimc='nvim ~/.dotfiles/nvim'
+alias nvimc='nvim ~/dotfiles/' 
 
 # work related aliases
 alias neh="tmuxifier load-session eh"

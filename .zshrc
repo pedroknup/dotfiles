@@ -14,10 +14,17 @@ alias gaa="git add ."
 alias gcm='git commit -m'
 
 alias hc='sh /Users/pedroknup/dev/personal/health-check.sh'
-alias nvimc='nvim ~/dotfiles/' 
+alias ac='nvim ~/dotfiles/' 
+alias a='nvim'
 
 # work related aliases
-alias neh="tmuxifier load-session eh"
+alias eh="cd ~/dev/EngineersHub" 
+alias ehsp="cd ~/dev/engineershub-service-providers/"
+alias eht="cd ~/dev/engineershub-templates/" 
+
+alias neh="cd ~/dev/EngineersHub && nvim ."
+alias nehsp="cd ~/dev/engineershub-service-providers/ && nvim ."
+alias neht="cd ~/dev/engineershub-templates/ && nvim ."
 
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm

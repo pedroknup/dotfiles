@@ -24,6 +24,7 @@ alias eht="cd ~/dev/engineershub-templates/"
 
 alias neh="cd ~/dev/EngineersHub && nvim ."
 alias nehsp="cd ~/dev/engineershub-service-providers/ && nvim ."
+alias nehsd="cd ~/dev/engineershub-service-definitions/ && nvim ."
 alias neht="cd ~/dev/engineershub-templates/ && nvim ."
 
 export NVM_DIR="$HOME/.nvm"

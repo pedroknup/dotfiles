@@ -23,12 +23,12 @@ local gitsigns = {
         numhl = true,
         on_attach = function(bufnr)
             local keymap_opts = { silent = true, noremap = true, buffer = bufnr }
-            vim.keymap.set(
-                "n",
-                "=",
-                "<cmd>Gitsigns preview_hunk<CR>",
-                vim.tbl_extend("force", keymap_opts, { desc = "Gitsigns float preview" })
-            )
+            -- vim.keymap.set(
+            --     "n",
+            --     "=",
+            --     "<cmd>Gitsigns preview_hunk<CR>",
+            --     vim.tbl_extend("force", keymap_opts, { desc = "Gitsigns float preview" })
+            -- )
             vim.keymap.set(
                 "n",
                 "<Leader>rh",

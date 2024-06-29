@@ -11,7 +11,8 @@ return {
                     keymap = {
                         jump_prev = "[[",
                         jump_next = "]]",
-                        accept = "<CR>",
+                        -- accept suggestion with shift+tab
+                        accept = "<S-Tab>",
                         refresh = "gr",
                         -- open = "<leader>gp",
                     },
@@ -47,10 +48,20 @@ return {
                 copilot_node_command = "node", -- Node.js version must be > 18.x
                 server_opts_overrides = {},
             })
-            vim.api.nvim_set_keymap(
+            local api = require("copilot.api")
+            print("should work")
+            api.register_status_notification_handler(function (data)
+              vim.api.nvim_set_var("copilot_status", data.status)
+            end)
+
+            vim.keymap.set(
                 "n",
-                "<leader>ts",
-                '<cmd>lua require("copilot.suggestion").toggle_auto_trigger()<CR>',
+                "<leader>tt",
+                function()
+                  vim.cmd('lua require("copilot.suggestion").toggle_auto_trigger()')
+                  local copilot_status = vim.api.nvim_get_var("copilot_status")
+                  print("Copilot suggestion is now " .. copilot_status)
+                end,
                 { noremap = true, silent = true, desc = "Toggle Copilot suggestion" }
             )
         end,

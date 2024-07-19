@@ -1,4 +1,5 @@
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+alias aftw="cd ~dev/personal/avocado-ftw"
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
@@ -20,12 +21,26 @@ alias a='nvim'
 # work related aliases
 alias eh="cd ~/dev/EngineersHub" 
 alias ehsp="cd ~/dev/engineershub-service-providers/"
+alias ehsd="cd ~/dev/engineershub-service-definitions"
 alias eht="cd ~/dev/engineershub-templates/" 
 
 alias neh="cd ~/dev/EngineersHub && nvim ."
 alias nehsp="cd ~/dev/engineershub-service-providers/ && nvim ."
 alias nehsd="cd ~/dev/engineershub-service-definitions/ && nvim ."
 alias neht="cd ~/dev/engineershub-templates/ && nvim ."
+
+alias yeh="cd ~/dev/EngineersHub && yarn dev"
+
+# personal projects
+alias aftw="cd ~/dev/personal/avocado-ftw"
+
+alias naftw="cd ~/dev/personal/avocado-ftw/ && nvim ."
+
+function forkWithRollingStores() {
+  git checkout -b "rolling-stores/$1"
+}
+
+alias gbe=forkWithRollingStores
 
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
@@ -35,12 +50,8 @@ export NVM_DIR="$HOME/.nvm"
 source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-export PATH="$HOME/.tmuxifier/bin:$PATH"
-
-eval "$(tmuxifier init -)" 
-
 eval "$(zoxide init zsh)"
 alias cd="z"
 
-export EDITOR='nvim'
+export EDITOR='vim'
 DISABLE_AUTO_TITLE="true"

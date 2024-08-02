@@ -11,8 +11,8 @@ return {
                     keymap = {
                         jump_prev = "[[",
                         jump_next = "]]",
-                        -- accept suggestion with shift+tab
-                        accept = "<S-Tab>",
+                        -- accept suggestion with ctrl ;
+                        accept = "<C-;>",
                         refresh = "gr",
                         -- open = "<leader>gp",
                     },

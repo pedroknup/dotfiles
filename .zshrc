@@ -23,11 +23,13 @@ alias eh="cd ~/dev/EngineersHub"
 alias ehsp="cd ~/dev/engineershub-service-providers/"
 alias ehsd="cd ~/dev/engineershub-service-definitions"
 alias eht="cd ~/dev/engineershub-templates/" 
+alias ehc="cd ~/dev/engineershub-configuration/"
 
 alias neh="cd ~/dev/EngineersHub && nvim ."
 alias nehsp="cd ~/dev/engineershub-service-providers/ && nvim ."
 alias nehsd="cd ~/dev/engineershub-service-definitions/ && nvim ."
 alias neht="cd ~/dev/engineershub-templates/ && nvim ."
+alias nehc="cd ~/dev/engineershub-configuration/ && nvim ."
 
 alias yeh="cd ~/dev/EngineersHub && yarn dev"
 

@@ -1,5 +1,6 @@
 return {
-    "neovim/nvim-lspconfig",
+    "mason-org/mason-lspconfig.nvim",
+    -- version = "1.32.0",
     event = { "BufReadPre", "BufNewFile" },
     dependencies = {
         "hrsh7th/cmp-nvim-lsp",
@@ -30,7 +31,7 @@ return {
 
                 -- opts.desc = "Go to declaration"
                 -- keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- go to declaration
-                keymap.set("n", "gD", function()
+                keymap.set("n", "gd", function()
                     local org_path = vim.api.nvim_buf_get_name(0)
 
                     -- Go to definition:

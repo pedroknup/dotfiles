@@ -60,7 +60,7 @@ local diffview = {
     "sindrets/diffview.nvim",
     keys = {
         {
-            "<Leader>gd",
+            "<Leader>gD",
             "<cmd>DiffviewOpen<CR>",
             desc = "Open changed files",
         },

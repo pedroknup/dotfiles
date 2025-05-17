@@ -6,8 +6,7 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="robbyrussell"
-plugins=(git)
-
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting you-should-use)
 source $ZSH/oh-my-zsh.sh
 
 alias dev="cd ~/dev"
@@ -15,8 +14,9 @@ alias gaa="git add ."
 alias gcm='git commit -m'
 
 alias hc='sh /Users/pedroknup/dev/personal/health-check.sh'
-alias ac='nvim ~/dotfiles/' 
-alias a='nvim'
+alias gitcommitdate='sh /Users/pedroknup/dev/personal/scripts/gitcommitdate.sh'
+alias nc='nvim ~/dotfiles/' 
+alias n='nvim'
 
 # work related aliases
 alias eh="cd ~/dev/EngineersHub" 
@@ -32,11 +32,14 @@ alias neht="cd ~/dev/engineershub-templates/ && nvim ."
 alias nehc="cd ~/dev/engineershub-configuration/ && nvim ."
 
 alias yeh="cd ~/dev/EngineersHub && yarn dev"
+alias yyeh="cd ~/dev/EngineersHub && yarn install && yarn dev"
 
 # personal projects
 alias aftw="cd ~/dev/personal/avocado-ftw"
-
 alias naftw="cd ~/dev/personal/avocado-ftw/ && nvim ."
+alias snap="cd ~/dev/personal/snapdesk" 
+alias nsnap="cd ~/dev/personal/snapdesk" 
+
 
 function forkWithRollingStores() {
   git checkout -b "rolling-stores/$1"

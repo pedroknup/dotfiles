@@ -7,7 +7,7 @@ opt.number = true
 
 -- tabs & indentation
 opt.tabstop = 4 -- 2 spaces for tabs (prettier default)
-opt.shiftwidth = 2 -- 2 spaces for indent width
+opt.shiftwidth = 4 -- 2 spaces for indent width
 opt.expandtab = true -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
 
@@ -39,6 +39,21 @@ opt.swapfile = false
 
 opt.title = true -- set title of terminal to nvim
 
-vim.cmd("set title")
+-- vim.cmd("set title")
 vim.cmd("source ~/.config/nvim/.vimrc")
+vim.cmd("hi Normal ctermbg=none guibg=none")
+-- vim.api.nvim_create_autocmd("VimEnter", {
+--     callback = function()
+--         vim.cmd('lua Snacks.dashboard()')
+--     end
+-- })
+vim.g.lazyvim_check_order = false
 
+vim.api.nvim_create_autocmd("VimEnter", {
+    callback = function()
+        if vim.api.nvim_buf_get_name(0) == "" then
+            -- Only open the dashboard if there are no other buffers
+            require("snacks").dashboard.open()
+        end
+    end,
+})

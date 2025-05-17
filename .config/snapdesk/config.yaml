@@ -1,0 +1,171 @@
+appShortcuts:
+- bundleIdentifier: company.thebrowser.Browser
+  shortcut:
+    key: a
+    modifiers:
+    - option
+- bundleIdentifier: com.googlecode.iterm2
+  shortcut:
+    key: i
+    modifiers:
+    - option
+- bundleIdentifier: com.googlecode.iterm2
+  shortcut:
+    key: '5'
+    modifiers:
+    - command
+    - option
+- bundleIdentifier: notion.id
+  shortcut:
+    key: n
+    modifiers:
+    - option
+- bundleIdentifier: com.apple.dt.Xcode
+  shortcut:
+    key: x
+    modifiers:
+    - option
+- bundleIdentifier: com.spotify.client
+  shortcut:
+    key: s
+    modifiers:
+    - option
+- bundleIdentifier: org.alacritty
+  shortcut:
+    key: k
+    modifiers:
+    - option
+- bundleIdentifier: com.bitwarden.desktop
+  shortcut:
+    key: b
+    modifiers:
+    - option
+- bundleIdentifier: net.whatsapp.WhatsApp
+  shortcut:
+    key: w
+    modifiers:
+    - option
+- bundleIdentifier: com.microsoft.teams2
+  shortcut:
+    key: t
+    modifiers:
+    - option
+- bundleIdentifier: com.apple.Safari
+  shortcut:
+    key: d
+    modifiers:
+    - option
+- bundleIdentifier: com.f5networks.EdgeClient
+  shortcut:
+    key: ''
+    modifiers: []
+- bundleIdentifier: com.microsoft.CompanyPortalMac
+  shortcut:
+    key: ''
+    modifiers: []
+- bundleIdentifier: com.apple.AccessibilityInspector
+  shortcut:
+    key: ''
+    modifiers: []
+generalShortcuts:
+- name: Toggle Full Screen layout for the current screen
+  shortcut:
+    key: ''
+    modifiers: []
+- name: Remove current window from layout
+  shortcut:
+    key: p
+    modifiers:
+    - option
+- name: Focus Screen 1
+  shortcut:
+    key: '1'
+    modifiers:
+    - command
+    - control
+- name: Focus Screen 2
+  shortcut:
+    key: '2'
+    modifiers:
+    - command
+    - control
+- name: Focus Screen 3
+  shortcut:
+    key: '3'
+    modifiers:
+    - command
+    - control
+- name: Focus Screen 4
+  shortcut:
+    key: '4'
+    modifiers:
+    - command
+    - control
+- name: Focus Screen 5
+  shortcut:
+    key: '5'
+    modifiers:
+    - command
+    - control
+- name: Focus Screen 6
+  shortcut:
+    key: '6'
+    modifiers:
+    - command
+    - control
+- name: Throw to Screen 1
+  shortcut:
+    key: '1'
+    modifiers:
+    - command
+    - shift
+- name: Throw to Screen 2
+  shortcut:
+    key: '2'
+    modifiers:
+    - command
+    - shift
+- name: Throw to Screen 3
+  shortcut:
+    key: '3'
+    modifiers:
+    - command
+    - shift
+- name: Throw to Screen 4
+  shortcut:
+    key: '4'
+    modifiers:
+    - command
+    - shift
+- name: Throw to Screen 5
+  shortcut:
+    key: '5'
+    modifiers:
+    - command
+    - shift
+- name: Throw to Screen 6
+  shortcut:
+    key: '6'
+    modifiers:
+    - command
+    - shift
+- name: Throw app to current layout modifier
+  shortcut:
+    key: ''
+    modifiers: []
+- name: Increase main panel count
+  shortcut:
+    key: ''
+    modifiers: []
+- name: Decrease main panel count
+  shortcut:
+    key: ''
+    modifiers: []
+- name: Cycle current layout windows clockwise
+  shortcut:
+    key: ''
+    modifiers: []
+- name: Cycle current layout windows counterclockwise
+  shortcut:
+    key: ''
+    modifiers: []

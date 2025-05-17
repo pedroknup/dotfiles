@@ -1,9 +1,15 @@
+-- return {
+--    { "mason-org/mason.nvim", version = "1.11.0" },
+--    { "mason-org/mason-lspconfig.nvim", version = "1.32.0" },
+-- }
 return {
     "williamboman/mason.nvim",
     dependencies = {
         "williamboman/mason-lspconfig.nvim",
         "WhoIsSethDaniel/mason-tool-installer.nvim",
+        "neovim/nvim-lspconfig"
     },
+    -- version = "1.11.0",
     config = function()
         -- import mason
         local mason = require("mason")
@@ -27,16 +33,16 @@ return {
         mason_lspconfig.setup({
             -- list of servers for mason to install
             ensure_installed = {
-                "tsserver",
+                "ts_ls",
                 "html",
-                "cssls",
-                "tailwindcss",
-                "lua_ls",
-                "graphql",
-                "emmet_ls",
-                "prismals",
-                "pyright",
-                "eslint",
+                -- "cssls",
+                -- "tailwindcss",
+                -- "lua_ls",
+                -- "graphql",
+                -- "emmet_ls",
+                -- "prismals",
+                -- "pyright",
+                -- "eslint",
             },
         })
 

@@ -24,16 +24,17 @@ mapper("n", "<leader>tp", "<cmd>tabp<CR>", "Go to previous tab") --  go to previ
 mapper("n", "<leader>tf", "<cmd>tabnew %<CR>", "Open current buffer in new tab") --  move current buffer to new tab
 
 mapper("x", "<leader>p", '"_dP', "Paste without yanking")
+mapper("n", "<C-/>", '<cmd>lua require("snacks.terminal").toggle()<CR>', "Toggle terminal")
 
 mapper("n", "<D-Up>", "<cmd>move-2<CR>", "Move line up")
 mapper("n", "<D-Down>", "<cmd>move+<CR>", "Move line down")
 
-mapper("n", "<C-e>", "3<C-e>", "Scroll down more quickly")
-mapper("n", "<C-y>", "3<C-y>", "Scroll up more quickly")
+-- mapper("n", "<C-e>", "3<C-e>", "Scroll down more quickly")
+-- mapper("n", "<C-y>", "3<C-y>", "Scroll up more quickly")
 
 -- toggles a mini tmux pane
 -- TODO: add the script to this repository
-mapper("n", "<leader>tt", ":silent! !~/dev/tmux/collapsable_mini_tmux_pane.sh<CR>")
+-- mapper("n", "<leader>tt", ":silent! !~/dev/tmux/collapsable_mini_tmux_pane.sh<CR>")
 
 mapper("i", "<F3>", "<C-c>:", "Exit insert mode and enter command mode")
 mapper("n", "<F3>", "<C-c>:", "Enter command mode")

@@ -92,3 +92,6 @@ export NOTES_DIRECTORY='/Users/etomsen/Documents/notes'
 source /opt/homebrew/share/zsh-abbr/zsh-abbr.zsh 2>/dev/null
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting you-should-use)
+
+eval "$(zoxide init zsh)"

@@ -12,7 +12,7 @@ return {
                         jump_prev = "[[",
                         jump_next = "]]",
                         -- accept suggestion with ctrl ;
-                        accept = "<C-;>",
+                        accept = "<C-y>",
                         refresh = "gr",
                         -- open = "<leader>gp",
                     },
@@ -26,7 +26,7 @@ return {
                     auto_trigger = false,
                     debounce = 75,
                     keymap = {
-                        accept = "<C-;>",
+                        accept = "<C-y>",
                         accept_word = false,
                         accept_line = false,
                         next = "<M-]>",
@@ -48,22 +48,14 @@ return {
                 copilot_node_command = "node", -- Node.js version must be > 18.x
                 server_opts_overrides = {},
             })
-            local api = require("copilot.api")
-            print("should work")
-            api.register_status_notification_handler(function (data)
-              vim.api.nvim_set_var("copilot_status", data.status)
-            end)
+            -- local api = require("copilot.api")
+            -- api.register_status_notification_handler(function (data)
+            --   vim.api.nvim_set_var("copilot_status", data.status)
+            -- end)
 
-            vim.keymap.set(
-                "n",
-                "<leader>tt",
-                function()
-                  vim.cmd('lua require("copilot.suggestion").toggle_auto_trigger()')
-                  local copilot_status = vim.api.nvim_get_var("copilot_status")
-                  print("Copilot suggestion is now " .. copilot_status)
-                end,
-                { noremap = true, silent = true, desc = "Toggle Copilot suggestion" }
-            )
+            vim.keymap.set("n", "<leader>tt", function()
+                vim.cmd('lua require("copilot.suggestion").toggle_auto_trigger()')
+            end, { noremap = true, silent = true, desc = "Toggle Copilot suggestion" })
         end,
     },
 

@@ -65,3 +65,9 @@ vim.g.loaded_netrw = 1
 --         end
 --     end,
 -- })
+--
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.foldingRange = {
+  dynamicRegistration = false,
+  lineFoldingOnly = true,
+}

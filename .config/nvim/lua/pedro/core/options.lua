@@ -1,4 +1,5 @@
-vim.cmd("let g:netrw_liststyle = 3")
+
+-- vim.cmd("let g:netrw_liststyle = 3")
 
 local opt = vim.opt
 
@@ -49,11 +50,18 @@ vim.cmd("hi Normal ctermbg=none guibg=none")
 -- })
 vim.g.lazyvim_check_order = false
 
-vim.api.nvim_create_autocmd("VimEnter", {
-    callback = function()
-        if vim.api.nvim_buf_get_name(0) == "" then
-            -- Only open the dashboard if there are no other buffers
-            require("snacks").dashboard.open()
-        end
-    end,
-})
+vim.g.loaded_netrwPlugin = 1
+vim.g.loaded_netrw = 1
+
+
+-- vim.api.nvim_create_autocmd("VimEnter", {
+--     callback = function()
+
+--         if vim.api.nvim_buf_get_name(0) == "" then
+--             -- Only open the dashboard if there are no other buffers
+--             -- print something
+--             print("hello")
+--             require("snacks").dashboard.open()
+--         end
+--     end,
+-- })

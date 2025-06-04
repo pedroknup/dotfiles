@@ -9,12 +9,6 @@ appShortcuts:
     key: i
     modifiers:
     - option
-- bundleIdentifier: com.googlecode.iterm2
-  shortcut:
-    key: '5'
-    modifiers:
-    - command
-    - option
 - bundleIdentifier: notion.id
   shortcut:
     key: n
@@ -30,9 +24,14 @@ appShortcuts:
     key: s
     modifiers:
     - option
-- bundleIdentifier: org.alacritty
+- bundleIdentifier: com.xlnaudio.addictivedrums2
   shortcut:
-    key: k
+    key: m
+    modifiers:
+    - option
+- bundleIdentifier: com.todesktop.230313mzl4w4u92
+  shortcut:
+    key: c
     modifiers:
     - option
 - bundleIdentifier: com.bitwarden.desktop
@@ -40,9 +39,9 @@ appShortcuts:
     key: b
     modifiers:
     - option
-- bundleIdentifier: net.whatsapp.WhatsApp
+- bundleIdentifier: org.alacritty
   shortcut:
-    key: w
+    key: k
     modifiers:
     - option
 - bundleIdentifier: com.microsoft.teams2
@@ -55,23 +54,17 @@ appShortcuts:
     key: d
     modifiers:
     - option
-- bundleIdentifier: com.f5networks.EdgeClient
+- bundleIdentifier: com.microsoft.Outlook
   shortcut:
-    key: ''
-    modifiers: []
-- bundleIdentifier: com.microsoft.CompanyPortalMac
+    key: o
+    modifiers:
+    - option
+- bundleIdentifier: net.whatsapp.WhatsApp
   shortcut:
-    key: ''
-    modifiers: []
-- bundleIdentifier: com.apple.AccessibilityInspector
-  shortcut:
-    key: ''
-    modifiers: []
+    key: w
+    modifiers:
+    - option
 generalShortcuts:
-- name: Toggle Full Screen layout for the current screen
-  shortcut:
-    key: ''
-    modifiers: []
 - name: Remove current window from layout
   shortcut:
     key: p
@@ -112,7 +105,7 @@ generalShortcuts:
     key: '6'
     modifiers:
     - command
-    - control
+    - option
 - name: Throw to Screen 1
   shortcut:
     key: '1'
@@ -145,7 +138,7 @@ generalShortcuts:
     - shift
 - name: Throw to Screen 6
   shortcut:
-    key: '6'
+    key: g
     modifiers:
     - command
     - shift
@@ -155,8 +148,10 @@ generalShortcuts:
     modifiers: []
 - name: Increase main panel count
   shortcut:
-    key: ''
-    modifiers: []
+    key: '='
+    modifiers:
+    - command
+    - option
 - name: Decrease main panel count
   shortcut:
     key: ''
@@ -169,3 +164,4 @@ generalShortcuts:
   shortcut:
     key: ''
     modifiers: []
+- name: Toggle Full Screen layout for the current screen

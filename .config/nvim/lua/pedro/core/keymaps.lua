@@ -4,7 +4,7 @@ local mapper = function(mode, key, result, desc)
     vim.keymap.set(mode, key, result, { noremap = true, silent = true, desc = desc })
 end
 
-mapper("i", "jk", "<ESC>", "Exit insert mode with jk")
+-- mapper("i", "jk", "<ESC>", "Exit insert mode with jk")
 
 mapper("n", "<leader>nh", ":nohl<CR>", "Clear search highlights")
 

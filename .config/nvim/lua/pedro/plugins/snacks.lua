@@ -2,6 +2,7 @@ return {
     "folke/snacks.nvim",
     priority = 1000,
     lazy = false,
+    enabled = true,
     init = function()
         vim.api.nvim_create_autocmd("User", {
             pattern = "OilActionsPost",
@@ -13,30 +14,6 @@ return {
         })
     end,
     keys = {
-        -- {
-        --     "<leader>bd",
-        --     function()
-        --         Snacks.bufdelete()
-        --     end,
-        --     desc = "Buffer delete",
-        --     mode = "n",
-        -- },
-        -- {
-        --     "<leader>ba",
-        --     function()
-        --         Snacks.bufdelete.all()
-        --     end,
-        --     desc = "Buffer delete all",
-        --     mode = "n",
-        -- },
-        -- {
-        --     "<leader>bo",
-        --     function()
-        --         Snacks.bufdelete.other()
-        --     end,
-        --     desc = "Buffer delete other",
-        --     mode = "n",
-        -- },
         {
             "<leader>zn",
             function()
@@ -48,68 +25,69 @@ return {
     },
     opts = {
         bigfile = { enabled = true },
+        explorer = {
+            follow_file = true,
+            enabled = true,
+        },
         dashboard = {
             enabled = true,
-            --             preset = {
-            --                 pick = nil,
-            --                 ---@type snacks.dashboard.Item[]
-            --                 keys = {
-            --                     { icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
-            --                     { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
-            --                     {
-            --                         icon = " ",
-            --                         key = "g",
-            --                         desc = "Find Text",
-            --                         action = ":lua Snacks.dashboard.pick('live_grep')",
-            --                     },
-            --                     {
-            --                         icon = " ",
-            --                         key = "r",
-            --                         desc = "Recent Files",
-            --                         action = ":lua Snacks.dashboard.pick('oldfiles')",
-            --                     },
-            --                     {
-            --                         icon = " ",
-            --                         key = "c",
-            --                         desc = "Config",
-            --                         action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})",
-            --                     },
-            --                     { icon = " ", key = "s", desc = "Restore Session", section = "session" },
-            --                     {
-            --                         icon = "󰒲 ",
-            --                         key = "l",
-            --                         desc = "Lazy",
-            --                         action = ":Lazy",
-            --                         enabled = package.loaded.lazy ~= nil,
-            --                     },
-            --                     { icon = " ", key = "q", desc = "Quit", action = ":qa" },
-            --                 },
-            --                 header = [[
-            --                                           
-            --    ████ ██████           █████      ██
-            --   ███████████             █████ 
-            --   █████████ ███████████████████ ███   ███████████
-            --  █████████  ███    █████████████ █████ ██████████████
-            -- █████████ ██████████ █████████ █████ █████ ████ █████
-            -- ███████████ ███    ███ █████████ █████ █████ ████ █████
-            --    ██████  █████████████████████ ████ █████ █████ ████ ██████
-            -- ]],
-            --             },
-            --             sections = {
-            --                 { section = "header" },
-            --                 {
-            --                     section = "keys",
-            --                     indent = 1,
-            --                     padding = 1,
-            --                 },
-            --                 { section = "recent_files", icon = " ", title = "Recent Files", indent = 3, padding = 2 },
-            --                 { section = "startup" },
-            --             },
+            preset = {
+                pick = nil,
+                ---@type snacks.dashboard.Item[]
+                keys = {
+                    { icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
+                    { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
+                    {
+                        icon = " ",
+                        key = "g",
+                        desc = "Find Text",
+                        action = ":lua Snacks.dashboard.pick('live_grep')",
+                    },
+                    {
+                        icon = " ",
+                        key = "r",
+                        desc = "Recent Files",
+                        action = ":lua Snacks.dashboard.pick('oldfiles')",
+                    },
+                    {
+                        icon = " ",
+                        key = "c",
+                        desc = "Config",
+                        action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})",
+                    },
+                    { icon = " ", key = "s", desc = "Restore Session", section = "session" },
+                    {
+                        icon = "󰒲 ",
+                        key = "l",
+                        desc = "Lazy",
+                        action = ":Lazy",
+                        enabled = package.loaded.lazy ~= nil,
+                    },
+                    { icon = " ", key = "q", desc = "Quit", action = ":qa" },
+                },
+                header = [[
+                                          
+   ████ ██████           █████      ██
+  ███████████             █████ 
+  █████████ ███████████████████ ███   ███████████
+ █████████  ███    █████████████ █████ ██████████████
+█████████ ██████████ █████████ █████ █████ ████ █████
+███████████ ███    ███ █████████ █████ █████ ████ █████
+   ██████  █████████████████████ ████ █████ █████ ████ ██████
+]],
+            },
+            sections = {
+                { section = "header" },
+                {
+                    section = "keys",
+                    indent = 1,
+                    padding = 1,
+                },
+                { section = "recent_files", icon = " ", title = "Recent Files", indent = 3, padding = 2 },
+                { section = "startup" },
+            },
         },
-        explorer = { enabled = false },
-        indent = { enabled = true },
         input = { enabled = false },
-        picker = { enabled = false },
         notifier = { enabled = false },
         terminal = {
             enabled = true,
@@ -118,7 +96,7 @@ return {
                 border = "single",
             },
         },
-        quickfile = { enabled = false },
+        quickfile = { enabled = true },
         scope = { enabled = false },
         statuscolumn = { enabled = false },
         words = { enabled = false },
@@ -136,6 +114,44 @@ return {
                 indent = false,
             },
         },
+
+        picker = {
+            sources = {
+                explorer = {
+                    ignored = true,
+                    hidden = true,
+                },
+            },
+            icons = {
+                git = {
+                    staged = "●",
+                    added = "A",
+                    deleted = "D",
+                    ignored = "",
+                    modified = "M",
+                    renamed = "R",
+                    untracked = "U",
+                },
+            },
+        },
+        indent = {
+            indent = { enabled = false, char = "▏" },
+            scope = {
+                enabled = true,
+                char = "▏",
+                underline = false,
+                only_current = true,
+                hl = {
+                    "RainbowDelimiterRed",
+                    "RainbowDelimiterYellow",
+                    "RainbowDelimiterBlue",
+                    "RainbowDelimiterCyan",
+                    "RainbowDelimiterOrange",
+                    "RainbowDelimiterGreen",
+                    "RainbowDelimiterViolet",
+                },
+            },
+        },
     },
     config = function(_, opts)
         require("snacks").setup(opts)
@@ -146,26 +162,26 @@ return {
             ":lua Snacks.picker.explorer()<CR>",
             { noremap = true, silent = true }
         )
-        Snacks.toggle.new({
-            id = "ufo",
-            name = "Enable/Disable ufo",
-            get = function()
-                return require("ufo").inspect()
-            end,
-            set = function(state)
-                if state == nil then
-                    require("noice").enable()
-                    require("ufo").enable()
-                    vim.o.foldenable = true
-                    vim.o.foldcolumn = "1"
-                else
-                    require("noice").disable()
-                    require("ufo").disable()
-                    vim.o.foldenable = false
-                    vim.o.foldcolumn = "0"
-                end
-            end,
-        })
+        -- Snacks.toggle.new({
+        --     id = "ufo",
+        --     name = "Enable/Disable ufo",
+        --     get = function()
+        --         return require("ufo").inspect()
+        --     end,
+        --     set = function(state)
+        --         if state == nil then
+        --             require("noice").enable()
+        --             require("ufo").enable()
+        --             vim.o.foldenable = true
+        --             vim.o.foldcolumn = "1"
+        --         else
+        --             require("noice").disable()
+        --             require("ufo").disable()
+        --             vim.o.foldenable = false
+        --             vim.o.foldcolumn = "0"
+        --         end
+        --     end,
+        -- })
     end,
 }
 -- return {

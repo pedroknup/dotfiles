@@ -41,12 +41,12 @@ local gitsigns = {
                 "<cmd>Gitsigns next_hunk<CR>",
                 vim.tbl_extend("force", keymap_opts, { desc = "Gitsigns goto next" })
             )
-            vim.keymap.set(
-                "n",
-                "<Leader>gp",
-                "<cmd>Gitsigns prev_hunk<CR>",
-                vim.tbl_extend("force", keymap_opts, { desc = "Gitsigns goto prev" })
-            )
+            -- vim.keymap.set(
+            --     "n",
+            --     "<Leader>gp",
+            --     "<cmd>Gitsigns prev_hunk<CR>",
+            --     vim.tbl_extend("force", keymap_opts, { desc = "Gitsigns goto prev" })
+            -- )
             vim.keymap.set(
                 "n",
                 "<Leader>gt",

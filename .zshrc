@@ -15,8 +15,8 @@ alias gcm='git commit -m'
 
 alias hc='sh /Users/pedroknup/dev/personal/health-check.sh'
 alias gitcommitdate='sh /Users/pedroknup/dev/personal/scripts/gitcommitdate.sh'
-alias nc='nvim ~/dotfiles/' 
-alias n='nvim'
+alias nc='cd ~/dotfiles/ && nvim .' 
+alias ncn='cd ~/dotfiles/.config/nvim/ && nvim .' 
 
 # work related aliases
 alias eh="cd ~/dev/EngineersHub" 
@@ -40,6 +40,7 @@ alias naftw="cd ~/dev/personal/avocado-ftw/ && nvim ."
 alias snap="cd ~/dev/personal/snapdesk" 
 alias nsnap="cd ~/dev/personal/snapdesk" 
 
+alias tsc="yarn run tsc" 
 
 function forkWithRollingStores() {
   git checkout -b "rolling-stores/$1"

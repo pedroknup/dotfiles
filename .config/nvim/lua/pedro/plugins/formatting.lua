@@ -46,7 +46,6 @@ return {
         })
 
         vim.keymap.set({ "n", "v" }, "<leader>mp", function()
-            print("confirm.format called")
             conform.format({
                 lsp_fallback = true,
                 async = false,

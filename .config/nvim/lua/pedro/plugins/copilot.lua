@@ -14,7 +14,7 @@ return {
                         -- accept suggestion with ctrl ;
                         accept = "<C-y>",
                         refresh = "gr",
-                        -- open = "<leader>gp",
+                        open = "<leader>gp",
                     },
                     layout = {
                         position = "bottom", -- | top | left | right
@@ -29,8 +29,8 @@ return {
                         accept = "<C-y>",
                         accept_word = false,
                         accept_line = false,
-                        next = "<M-]>",
-                        prev = "<M-[>",
+                        next = "<C-.>",
+                        prev = "<C-,>",
                         dismiss = "<C-]>",
                     },
                 },

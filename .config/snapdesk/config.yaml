@@ -148,10 +148,8 @@ generalShortcuts:
     modifiers: []
 - name: Increase main panel count
   shortcut:
-    key: '='
-    modifiers:
-    - command
-    - option
+    key: ''
+    modifiers: []
 - name: Decrease main panel count
   shortcut:
     key: ''

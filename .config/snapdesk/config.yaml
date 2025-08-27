@@ -29,11 +29,6 @@ appShortcuts:
     key: m
     modifiers:
     - option
-- bundleIdentifier: com.todesktop.230313mzl4w4u92
-  shortcut:
-    key: c
-    modifiers:
-    - option
 - bundleIdentifier: com.bitwarden.desktop
   shortcut:
     key: b
@@ -62,6 +57,16 @@ appShortcuts:
 - bundleIdentifier: net.whatsapp.WhatsApp
   shortcut:
     key: w
+    modifiers:
+    - option
+- bundleIdentifier: com.microsoft.VSCode
+  shortcut:
+    key: v
+    modifiers:
+    - option
+- bundleIdentifier: com.tinyspeck.slackmacgap
+  shortcut:
+    key: l
     modifiers:
     - option
 generalShortcuts:
@@ -163,3 +168,26 @@ generalShortcuts:
     key: ''
     modifiers: []
 - name: Toggle Full Screen layout for the current screen
+- name: Toggle layout for current WindowSet
+  shortcut:
+    key: z
+    modifiers:
+    - option
+settings:
+  showLayoutIndicator: true
+  showThrowNotifications: true
+  notificationDuration: 1.5e+0
+  notificationPosition: center
+  launchAtLogin: false
+  hideMenuBarIcon: false
+  enableAccessibilityOnStart: true
+  windowGap: 4e+0
+  windowMargin: 0e+0
+  defaultLayoutMode: wide
+  animateWindowTransitions: true
+  respectWindowMinimumSize: true
+  autoExpandNewWindows: true
+  enableDebugLogging: false
+  showLogsView: false
+  windowDetectionInterval: 5e-1
+  focusFollowsMouse: false

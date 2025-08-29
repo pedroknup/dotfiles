@@ -61,3 +61,5 @@ alias cd="z"
 
 export EDITOR='vim'
 DISABLE_AUTO_TITLE="true"
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export LESS='-FRX'

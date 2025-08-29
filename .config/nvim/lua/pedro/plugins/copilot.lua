@@ -23,8 +23,8 @@ return {
                 },
                 suggestion = {
                     enabled = true,
-                    auto_trigger = false,
-                    debounce = 75,
+                    auto_trigger = true,
+                    debounce = 25,
                     keymap = {
                         accept = "<C-y>",
                         accept_word = false,
@@ -35,7 +35,7 @@ return {
                     },
                 },
                 filetypes = {
-                    yaml = false,
+                    yaml = true,
                     markdown = false,
                     help = false,
                     gitcommit = false,

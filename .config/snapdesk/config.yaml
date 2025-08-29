@@ -69,10 +69,19 @@ appShortcuts:
     key: l
     modifiers:
     - option
+- bundleIdentifier: com.postmanlabs.mac
+  shortcut:
+    key: p
+    modifiers:
+    - option
+- bundleIdentifier: com.apple.AccessibilityInspector
+  shortcut:
+    key: ''
+    modifiers: []
 generalShortcuts:
 - name: Remove current window from layout
   shortcut:
-    key: p
+    key: ','
     modifiers:
     - option
 - name: Focus Screen 1
@@ -151,15 +160,17 @@ generalShortcuts:
   shortcut:
     key: ''
     modifiers: []
-- name: Increase main panel count
+- name: Toggle layout for current WindowSet
   shortcut:
-    key: ''
-    modifiers: []
-- name: Decrease main panel count
+    key: z
+    modifiers:
+    - option
+- name: Increase main panel size
   shortcut:
-    key: ''
-    modifiers: []
-- name: Cycle current layout windows clockwise
+    key: '='
+    modifiers:
+    - option
+- name: Decrease main panel size
   shortcut:
     key: ''
     modifiers: []

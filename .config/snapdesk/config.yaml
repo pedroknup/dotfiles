@@ -1,4 +1,9 @@
 appShortcuts:
+- bundleIdentifier: com.apple.iCal
+  shortcut:
+    key: f
+    modifiers:
+    - option
 - bundleIdentifier: company.thebrowser.Browser
   shortcut:
     key: a
@@ -24,24 +29,18 @@ appShortcuts:
     key: s
     modifiers:
     - option
-- bundleIdentifier: com.xlnaudio.addictivedrums2
-  shortcut:
-    key: m
-    modifiers:
-    - option
-- bundleIdentifier: com.bitwarden.desktop
-  shortcut:
-    key: b
-    modifiers:
-    - option
 - bundleIdentifier: org.alacritty
   shortcut:
     key: k
     modifiers:
     - option
-- bundleIdentifier: com.microsoft.teams2
+- bundleIdentifier: com.runningwithcrayons.Alfred
   shortcut:
-    key: t
+    key: ''
+    modifiers: []
+- bundleIdentifier: com.bitwarden.desktop
+  shortcut:
+    key: b
     modifiers:
     - option
 - bundleIdentifier: com.apple.Safari
@@ -49,9 +48,9 @@ appShortcuts:
     key: d
     modifiers:
     - option
-- bundleIdentifier: com.microsoft.Outlook
+- bundleIdentifier: com.tinyspeck.slackmacgap
   shortcut:
-    key: o
+    key: l
     modifiers:
     - option
 - bundleIdentifier: net.whatsapp.WhatsApp
@@ -64,62 +63,41 @@ appShortcuts:
     key: v
     modifiers:
     - option
-- bundleIdentifier: com.tinyspeck.slackmacgap
-  shortcut:
-    key: l
-    modifiers:
-    - option
-- bundleIdentifier: com.postmanlabs.mac
-  shortcut:
-    key: p
-    modifiers:
-    - option
-- bundleIdentifier: com.apple.AccessibilityInspector
-  shortcut:
-    key: ''
-    modifiers: []
 generalShortcuts:
 - name: Remove current window from layout
   shortcut:
     key: ','
     modifiers:
     - option
+- name: Toggle layout for current WindowSet
+  shortcut:
+    key: z
+    modifiers:
+    - option
 - name: Focus Screen 1
   shortcut:
-    key: '1'
-    modifiers:
-    - command
-    - control
+    key: ''
+    modifiers: []
 - name: Focus Screen 2
   shortcut:
-    key: '2'
-    modifiers:
-    - command
-    - control
+    key: ''
+    modifiers: []
 - name: Focus Screen 3
   shortcut:
-    key: '3'
-    modifiers:
-    - command
-    - control
+    key: ''
+    modifiers: []
 - name: Focus Screen 4
   shortcut:
-    key: '4'
-    modifiers:
-    - command
-    - control
+    key: ''
+    modifiers: []
 - name: Focus Screen 5
   shortcut:
-    key: '5'
-    modifiers:
-    - command
-    - control
+    key: ''
+    modifiers: []
 - name: Focus Screen 6
   shortcut:
-    key: '6'
-    modifiers:
-    - command
-    - option
+    key: ''
+    modifiers: []
 - name: Throw to Screen 1
   shortcut:
     key: '1'
@@ -134,36 +112,25 @@ generalShortcuts:
     - shift
 - name: Throw to Screen 3
   shortcut:
-    key: '3'
-    modifiers:
-    - command
-    - shift
+    key: ''
+    modifiers: []
 - name: Throw to Screen 4
-  shortcut:
-    key: '4'
-    modifiers:
-    - command
-    - shift
-- name: Throw to Screen 5
-  shortcut:
-    key: '5'
-    modifiers:
-    - command
-    - shift
-- name: Throw to Screen 6
-  shortcut:
-    key: g
-    modifiers:
-    - command
-    - shift
-- name: Throw app to current layout modifier
   shortcut:
     key: ''
     modifiers: []
-- name: Toggle layout for current WindowSet
+- name: Throw to Screen 5
   shortcut:
-    key: z
+    key: ''
+    modifiers: []
+- name: Throw to Screen 6
+  shortcut:
+    key: ''
+    modifiers: []
+- name: Throw app to current layout modifier
+  shortcut:
+    key: t
     modifiers:
+    - command
     - option
 - name: Increase main panel size
   shortcut:
@@ -172,33 +139,59 @@ generalShortcuts:
     - option
 - name: Decrease main panel size
   shortcut:
-    key: ''
-    modifiers: []
-- name: Cycle current layout windows counterclockwise
-  shortcut:
-    key: ''
-    modifiers: []
-- name: Toggle Full Screen layout for the current screen
-- name: Toggle layout for current WindowSet
-  shortcut:
-    key: z
+    key: '-'
     modifiers:
     - option
-settings:
-  showLayoutIndicator: true
-  showThrowNotifications: true
-  notificationDuration: 1.5e+0
-  notificationPosition: center
-  launchAtLogin: false
-  hideMenuBarIcon: false
-  enableAccessibilityOnStart: true
-  windowGap: 4e+0
-  windowMargin: 0e+0
-  defaultLayoutMode: wide
-  animateWindowTransitions: true
-  respectWindowMinimumSize: true
-  autoExpandNewWindows: true
-  enableDebugLogging: false
-  showLogsView: false
-  windowDetectionInterval: 5e-1
-  focusFollowsMouse: false
+- name: Expand Windows
+  shortcut:
+    key: .
+    modifiers:
+    - option
+- name: Move Window Up in Layout
+  shortcut:
+    key: h
+    modifiers:
+    - option
+- name: Move Window Down in Layout
+  shortcut:
+    key: g
+    modifiers:
+    - option
+- name: Show layout visualization
+  shortcut:
+    key: r
+    modifiers:
+    - option
+- name: Position Window Left
+  shortcut:
+    key: q
+    modifiers:
+    - option
+- name: Position Window Right
+  shortcut:
+    key: e
+    modifiers:
+    - option
+- name: Position Window Top
+- name: Position Window Bottom
+- name: Position Window Top Left
+- name: Position Window Top Right
+  shortcut:
+    key: t
+    modifiers:
+    - option
+- name: Position Window Bottom Left
+- name: Position Window Bottom Right
+- name: Position Window Center
+windowPreview:
+  enabled: true
+  maxWidth: 2e+2
+  maxHeight: 1.5e+2
+  cacheTimeoutSeconds: 5e+0
+theme:
+  accentColorRed: 0e+0
+  accentColorGreen: 5e-1
+  accentColorBlue: 1e+0
+  accentColorAlpha: 1e+0
+  activeWindowBorderWidth: 3e+0
+  inactiveWindowOpacity: 7e-1

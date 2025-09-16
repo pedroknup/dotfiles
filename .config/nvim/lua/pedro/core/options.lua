@@ -53,6 +53,16 @@ vim.g.lazyvim_check_order = false
 vim.g.loaded_netrwPlugin = 1
 vim.g.loaded_netrw = 1
 
+vim.api.nvim_create_autocmd('VimEnter', {
+  callback = function()
+    Snacks.util.set_hl({
+      PickerDir = { link = 'Text' },
+      PickerPathHidden = { link = 'Text' },
+      PickerPathIgnored = { link = 'Comment' },
+      PickerGitStatusUntracked = { link = 'Special' },
+    }, { prefix = 'Snacks' })
+  end,
+})
 
 -- vim.api.nvim_create_autocmd("VimEnter", {
 --     callback = function()

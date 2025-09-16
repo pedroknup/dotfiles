@@ -6,8 +6,6 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="robbyrussell"
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting you-should-use)
-source $ZSH/oh-my-zsh.sh
 
 alias dev="cd ~/dev"
 alias gaa="git add ."
@@ -55,11 +53,32 @@ export NVM_DIR="$HOME/.nvm"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.oh-my-zsh/custom/plugins/zsh-bat/zsh-bat.plugin.zsh
+
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+source $ZSH/oh-my-zsh.sh
+
+# source ~/.oh-my-zsh/custom/plugins/zsh-vi-mode/zsh-vi-mode.zsh
+
 
 eval "$(zoxide init zsh)"
-alias cd="z"
+alias o="z"
+alias gip="git-identity personal"
+alias gic="git-identity code"
+
 
 export EDITOR='vim'
 DISABLE_AUTO_TITLE="true"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export LESS='-FRX'
+export PATH="$HOME/.basher/bin:$PATH"
+eval "$(basher init - zsh)"
+[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+set -o vi
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/pedroknup/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/pedroknup/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/pedroknup/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/pedroknup/Downloads/google-cloud-sdk/completion.zsh.inc'; fi

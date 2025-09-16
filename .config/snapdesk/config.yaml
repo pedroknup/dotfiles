@@ -63,6 +63,11 @@ appShortcuts:
     key: v
     modifiers:
     - option
+- bundleIdentifier: com.openai.chat
+  shortcut:
+    key: o
+    modifiers:
+    - option
 generalShortcuts:
 - name: Remove current window from layout
   shortcut:
@@ -112,8 +117,10 @@ generalShortcuts:
     - shift
 - name: Throw to Screen 3
   shortcut:
-    key: ''
-    modifiers: []
+    key: '3'
+    modifiers:
+    - command
+    - shift
 - name: Throw to Screen 4
   shortcut:
     key: ''
@@ -134,12 +141,12 @@ generalShortcuts:
     - option
 - name: Increase main panel size
   shortcut:
-    key: '='
+    key: y
     modifiers:
     - option
 - name: Decrease main panel size
   shortcut:
-    key: '-'
+    key: t
     modifiers:
     - option
 - name: Expand Windows
@@ -163,23 +170,11 @@ generalShortcuts:
     modifiers:
     - option
 - name: Position Window Left
-  shortcut:
-    key: q
-    modifiers:
-    - option
 - name: Position Window Right
-  shortcut:
-    key: e
-    modifiers:
-    - option
 - name: Position Window Top
 - name: Position Window Bottom
 - name: Position Window Top Left
 - name: Position Window Top Right
-  shortcut:
-    key: t
-    modifiers:
-    - option
 - name: Position Window Bottom Left
 - name: Position Window Bottom Right
 - name: Position Window Center

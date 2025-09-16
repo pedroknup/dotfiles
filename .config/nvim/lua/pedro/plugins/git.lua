@@ -33,7 +33,7 @@ local gitsigns = {
                 "n",
                 "<Leader>rh",
                 "<cmd>Gitsigns reset_hunk<CR>",
-                vim.tbl_extend("force", keymap_opts, { desc = "Gitsigns float preview" })
+                vim.tbl_extend("force", keymap_opts, { desc = "Reset current hunk" })
             )
             vim.keymap.set(
                 "n",

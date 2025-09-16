@@ -9,11 +9,11 @@ return {
 
         require("telescope").load_extension("harpoon")
 
-        vim.keymap.set("n", "<leader>hh", ":lua require('harpoon.ui').toggle_quick_menu()<CR>")
-        vim.keymap.set("n", "<leader>hm", ":lua require('harpoon.mark').toggle_file()<CR>")
-        vim.keymap.set("n", "<leader>hq", ":lua require('harpoon.ui').nav_file(1)<CR>")
-        vim.keymap.set("n", "<leader>hw", ":lua require('harpoon.ui').nav_file(2)<CR>")
-        vim.keymap.set("n", "<leader>he", ":lua require('harpoon.ui').nav_file(3)<CR>")
-        vim.keymap.set("n", "<leader>hr", ":lua require('harpoon.ui').nav_file(4)<CR>")
+        vim.keymap.set("n", "<leader>hh", ":lua require('harpoon.ui').toggle_quick_menu()<CR>", { desc = "Show harpoon menu" })
+        vim.keymap.set("n", "<leader>hm", ":lua require('harpoon.mark').toggle_file()<CR>", { desc = "Mark file with harpoon" })
+        vim.keymap.set("n", "<leader>hq", ":lua require('harpoon.ui').nav_file(1)<CR>", { desc = "Navigate to harpoon file 1" })
+        vim.keymap.set("n", "<leader>hw", ":lua require('harpoon.ui').nav_file(2)<CR>", { desc = "Navigate to harpoon file 2" })
+        vim.keymap.set("n", "<leader>he", ":lua require('harpoon.ui').nav_file(3)<CR>", { desc = "Navigate to harpoon file 3" })
+        vim.keymap.set("n", "<leader>hr", ":lua require('harpoon.ui').nav_file(4)<CR>", { desc = "Navigate to harpoon file 4" })
     end,
 }

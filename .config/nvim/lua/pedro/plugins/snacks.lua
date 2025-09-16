@@ -35,27 +35,27 @@ return {
                 pick = nil,
                 ---@type snacks.dashboard.Item[]
                 keys = {
-                    { icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
-                    { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
+                    { icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
+                    { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
                     {
-                        icon = " ",
+                        icon = " ",
                         key = "g",
                         desc = "Find Text",
                         action = ":lua Snacks.dashboard.pick('live_grep')",
                     },
                     {
-                        icon = " ",
+                        icon = " ",
                         key = "r",
                         desc = "Recent Files",
                         action = ":lua Snacks.dashboard.pick('oldfiles')",
                     },
                     {
-                        icon = " ",
+                        icon = " ",
                         key = "c",
                         desc = "Config",
                         action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})",
                     },
-                    { icon = " ", key = "s", desc = "Restore Session", section = "session" },
+                    { icon = " ", key = "s", desc = "Restore Session", section = "session" },
                     {
                         icon = "󰒲 ",
                         key = "l",
@@ -63,18 +63,18 @@ return {
                         action = ":Lazy",
                         enabled = package.loaded.lazy ~= nil,
                     },
-                    { icon = " ", key = "q", desc = "Quit", action = ":qa" },
+                    { icon = " ", key = "q", desc = "Quit", action = ":qa" },
                 },
-                header = 
+                header =
 [[
-                                          
-   ████ ██████           █████      ██
-  ███████████             █████ 
-  █████████ ███████████████████ ███   ███████████
- █████████  ███    █████████████ █████ ██████████████
-█████████ ██████████ █████████ █████ █████ ████ █████
-███████████ ███    ███ █████████ █████ █████ ████ █████
-   ██████  █████████████████████ ████ █████ █████ ████ ██████
+
+   ████ ██████           █████      ██
+  ███████████             █████
+  █████████ ███████████████████ ███   ███████████
+ █████████  ███    █████████████ █████ ██████████████
+█████████ ██████████ █████████ █████ █████ ████ █████
+███████████ ███    ███ █████████ █████ █████ ████ █████
+   ██████  █████████████████████ ████ █████ █████ ████ ██████
 ]],
             },
             sections = {
@@ -84,7 +84,7 @@ return {
                     indent = 1,
                     padding = 1,
                 },
-                { section = "recent_files", icon = " ", title = "Recent Files", indent = 3, padding = 2 },
+                { section = "recent_files", icon = " ", title = "Recent Files", indent = 3, padding = 2 },
                 { section = "startup" },
             },
         },
@@ -161,134 +161,7 @@ return {
             "n",
             "<leader>ef",
             ":lua Snacks.picker.explorer()<CR>",
-            { noremap = true, silent = true }
+            { noremap = true, silent = true, desc = "Open file explorer" }
         )
-        -- Snacks.toggle.new({
-        --     id = "ufo",
-        --     name = "Enable/Disable ufo",
-        --     get = function()
-        --         return require("ufo").inspect()
-        --     end,
-        --     set = function(state)
-        --         if state == nil then
-        --             require("noice").enable()
-        --             require("ufo").enable()
-        --             vim.o.foldenable = true
-        --             vim.o.foldcolumn = "1"
-        --         else
-        --             require("noice").disable()
-        --             require("ufo").disable()
-        --             vim.o.foldenable = false
-        --             vim.o.foldcolumn = "0"
-        --         end
-        --     end,
-        -- })
     end,
 }
--- return {
---     "folke/snacks.nvim",
---     priority = 1000,
---     lazy = false,
---     enabled = true,
---     ---@type snacks.Config
---     opts = {
---         -- your configuration comes here
---         -- or leave it empty to use the default settings
---         -- refer to the configuration section below
---         animate = { enable = false },
---         bigfile = { enabled = true },
---         dashboard = {
---             enabled = true,
---             preset = {
---                 pick = nil,
---                 ---@type snacks.dashboard.Item[]
---                 keys = {
---                     { icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
---                     { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
---                     {
---                         icon = " ",
---                         key = "g",
---                         desc = "Find Text",
---                         action = ":lua Snacks.dashboard.pick('live_grep')",
---                     },
---                     {
---                         icon = " ",
---                         key = "r",
---                         desc = "Recent Files",
---                         action = ":lua Snacks.dashboard.pick('oldfiles')",
---                     },
---                     {
---                         icon = " ",
---                         key = "c",
---                         desc = "Config",
---                         action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})",
---                     },
---                     { icon = " ", key = "s", desc = "Restore Session", section = "session" },
---                     {
---                         icon = "󰒲 ",
---                         key = "l",
---                         desc = "Lazy",
---                         action = ":Lazy",
---                         enabled = package.loaded.lazy ~= nil,
---                     },
---                     { icon = " ", key = "q", desc = "Quit", action = ":qa" },
---                 },
---                 header = [[
---                                           
---    ████ ██████           █████      ██
---   ███████████             █████ 
---   █████████ ███████████████████ ███   ███████████
---  █████████  ███    █████████████ █████ ██████████████
--- █████████ ██████████ █████████ █████ █████ ████ █████
--- ███████████ ███    ███ █████████ █████ █████ ████ █████
---    ██████  █████████████████████ ████ █████ █████ ████ ██████
--- ]],
---             },
---             sections = {
---                 { section = "header" },
---                 {
---                     section = "keys",
---                     indent = 1,
---                     padding = 1,
---                 },
---                 { section = "recent_files", icon = " ", title = "Recent Files", indent = 3, padding = 2 },
---                 { section = "startup" },
---             },
---         },
---         explorer = { enabled = true, follow_file = true },
---         indent = { enabled = true },
---         input = { enabled = true },
---         picker = { enabled = true },
---         notifier = { enabled = true },
---         quickfile = { enabled = true },
---         scope = { enabled = true },
---         scroll = { enabled = false },
---         statuscolumn = { enabled = true },
---         words = { enabled = true },
---         terminal = {
---             enabled = true,
---             win = {
---                 position = "float",
---                 border = "single",
---             },
---         },
---     },
---     -- keys = {
---     --     {
---     --         "<leader>zn",
---     --         function()
---     --             Snacks.zen()
---     --         end,
---     --         desc = "Toggle Zen Mode",
---     --         mode = "n",
---     --     },
---     -- },
---     config = function()
---         vim.api.nvim_set_keymap(
---             "n",
---             "<leader>ef",
---             ":lua Snacks.picker.explorer()<CR>",
---             { noremap = true, silent = true }
---         )
---     end,
--- }

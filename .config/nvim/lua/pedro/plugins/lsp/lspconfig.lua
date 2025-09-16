@@ -29,30 +29,8 @@ return {
                 opts.desc = "Show LSP references"
                 keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts) -- show definition, references
 
-                -- opts.desc = "Go to declaration"
-                -- keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- go to declaration
-                keymap.set("n", "gd", function()
-                    local org_path = vim.api.nvim_buf_get_name(0)
-
-                    -- Go to definition:
-                    vim.api.nvim_command("normal gd")
-
-                    -- Wait LSP server response
-                    vim.wait(100, function() end)
-
-                    local new_path = vim.api.nvim_buf_get_name(0)
-                    if not (org_path == new_path) then
-                        -- Create a new tab for the original file
-                        vim.api.nvim_command("0tabnew %")
-
-                        -- Restore the cursor position
-                        vim.api.nvim_command("b " .. org_path)
-                        vim.api.nvim_command('normal! `"')
-
-                        -- Switch to the original tab
-                        vim.api.nvim_command("normal! gt")
-                    end
-                end, opts)
+                opts.desc = "Go to declaration"
+                keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- go to declaration
 
                 opts.desc = "Show LSP definitions"
                 keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts) -- show lsp definitions

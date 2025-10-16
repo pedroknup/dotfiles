@@ -18,7 +18,10 @@ return {
     vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
       group = lint_augroup,
       callback = function()
-        lint.try_lint()
+        local bufname = vim.api.nvim_buf_get_name(0)
+        if not string.match(bufname, "xandres%.gadget%.app") then
+          lint.try_lint()
+        end
       end,
     })
 

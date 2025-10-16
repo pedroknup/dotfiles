@@ -7,9 +7,9 @@ return {
         conform.setup({
             formatters_by_ft = {
                 javascript = {"prettier"},
-                typescript = {},
-                javascriptreact = {},
-                typescriptreact = {},
+                typescript = {"prettier"},
+                javascriptreact = {"prettier"},
+                typescriptreact = {"prettier"},
                 css = { "prettier" },
                 html = { "prettier" },
                 json = { "prettier" },
@@ -19,6 +19,11 @@ return {
                 liquid = { "prettier" },
                 lua = { "stylua" },
                 python = { "isort", "black" },
+            },
+            formatters = {
+                prettier = {
+                    prepend_args = { "--config-precedence", "prefer-file" },
+                },
             },
 
             linters = {
@@ -45,12 +50,24 @@ return {
             },
         })
 
-        vim.keymap.set({ "n", "v" }, "<leader>mp", function()
+        vim.keymap.set("n", "<leader>mp", function()
             conform.format({
                 lsp_fallback = true,
                 async = false,
                 timeout_ms = 1000,
             })
-        end, { desc = "Format file or range (in visual mode)" })
+        end, { desc = "Format file" })
+
+        vim.keymap.set("v", "<leader>mp", function()
+            conform.format({
+                lsp_fallback = true,
+                async = false,
+                timeout_ms = 1000,
+                range = {
+                    start = vim.api.nvim_buf_get_mark(0, "<"),
+                    ["end"] = vim.api.nvim_buf_get_mark(0, ">"),
+                },
+            })
+        end, { desc = "Format range" })
     end,
 }

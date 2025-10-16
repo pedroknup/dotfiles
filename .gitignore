@@ -1,3 +1,5 @@
 .config/github-copilot/
 .config/github-copilot/*
 security/
+.DS_Store
+.config/*

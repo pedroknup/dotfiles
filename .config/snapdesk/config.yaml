@@ -68,6 +68,11 @@ appShortcuts:
     key: o
     modifiers:
     - option
+- bundleIdentifier: com.postmanlabs.mac
+  shortcut:
+    key: p
+    modifiers:
+    - option
 generalShortcuts:
 - name: Remove current window from layout
   shortcut:
@@ -81,19 +86,21 @@ generalShortcuts:
     - option
 - name: Focus Screen 1
   shortcut:
-    key: ''
-    modifiers: []
+    key: '1'
+    modifiers:
+    - option
 - name: Focus Screen 2
   shortcut:
-    key: ''
-    modifiers: []
+    key: '2'
+    modifiers:
+    - option
 - name: Focus Screen 3
   shortcut:
     key: ''
     modifiers: []
 - name: Focus Screen 4
   shortcut:
-    key: ''
+    key: "\e"
     modifiers: []
 - name: Focus Screen 5
   shortcut:
@@ -178,6 +185,11 @@ generalShortcuts:
 - name: Position Window Bottom Left
 - name: Position Window Bottom Right
 - name: Position Window Center
+- name: Cycle Current App Backward
+  shortcut:
+    key: u
+    modifiers:
+    - option
 windowPreview:
   enabled: true
   maxWidth: 2e+2

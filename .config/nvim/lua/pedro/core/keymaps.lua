@@ -1,4 +1,4 @@
-vim.g.mapleader = " "
+vim.g.mapleader = ";"
 
 local mapper = function(mode, key, result, desc)
     vim.keymap.set(mode, key, result, { noremap = true, silent = true, desc = desc })

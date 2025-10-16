@@ -11,7 +11,7 @@ alias dev="cd ~/dev"
 alias gaa="git add ."
 alias gcm='git commit -m'
 
-alias hc='sh /Users/pedroknup/dev/personal/health-check.sh'
+alias hc='sh /Users/pedroknup/dev/personal/scripts/health-check.sh'
 alias gitcommitdate='sh /Users/pedroknup/dev/personal/scripts/gitcommitdate.sh'
 alias nc='cd ~/dotfiles/ && nvim .' 
 alias ncn='cd ~/dotfiles/.config/nvim/ && nvim .' 
@@ -40,11 +40,21 @@ alias nsnap="cd ~/dev/personal/snapdesk"
 
 alias tsc="yarn run tsc" 
 
-function forkWithRollingStores() {
-  git checkout -b "rolling-stores/$1"
+function forkWithType() {
+  if [ $# -lt 3 ]; then
+    echo "Usage: gbe <type> <ticket> <description>"
+    echo "Example: gbe feat xan-123 feature-name"
+    return 1
+  fi
+
+  local type=$1
+  local ticket=$(echo $2 | tr '[:lower:]' '[:upper:]')
+  local description=$3
+
+  git checkout -b "${type}/${ticket}-${description}"
 }
 
-alias gbe=forkWithRollingStores
+alias gbe=forkWithType
 
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm

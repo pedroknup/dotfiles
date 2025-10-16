@@ -11,8 +11,6 @@ return {
                     keymap = {
                         jump_prev = "[[",
                         jump_next = "]]",
-                        -- accept suggestion with ctrl ;
-                        accept = "<C-y>",
                         refresh = "gr",
                         open = "<leader>gp",
                     },

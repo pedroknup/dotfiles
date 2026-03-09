@@ -1,12 +1,11 @@
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-alias aftw="cd ~dev/personal/avocado-ftw"
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="robbyrussell"
-
+# bindkey -e   # emacs-style keys; -v if you prefer vi-mode
 alias dev="cd ~/dev"
 alias gaa="git add ."
 alias gcm='git commit -m'
@@ -40,21 +39,10 @@ alias nsnap="cd ~/dev/personal/snapdesk"
 
 alias tsc="yarn run tsc" 
 
-function forkWithType() {
-  if [ $# -lt 3 ]; then
-    echo "Usage: gbe <type> <ticket> <description>"
-    echo "Example: gbe feat xan-123 feature-name"
-    return 1
-  fi
+alias grff="git reset --hard HEAD && git clean -fd" ## reset and clean untracked files
 
-  local type=$1
-  local ticket=$(echo $2 | tr '[:lower:]' '[:upper:]')
-  local description=$3
-
-  git checkout -b "${type}/${ticket}-${description}"
-}
-
-alias gbe=forkWithType
+# Load custom functions
+[[ -f ~/.zsh_functions ]] && source ~/.zsh_functions
 
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
@@ -67,9 +55,6 @@ source ~/.oh-my-zsh/custom/plugins/zsh-bat/zsh-bat.plugin.zsh
 
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
-
-# source ~/.oh-my-zsh/custom/plugins/zsh-vi-mode/zsh-vi-mode.zsh
-
 
 eval "$(zoxide init zsh)"
 alias o="z"
@@ -85,10 +70,18 @@ export PATH="$HOME/.basher/bin:$PATH"
 eval "$(basher init - zsh)"
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-set -o vi
+# set -o vi
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/pedroknup/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/pedroknup/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/pedroknup/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/pedroknup/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+# pyenv configuration
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+export PATH=".:${HOME}/bin:${PATH}"
+export PATH="$HOME/.local/bin:$PATH"

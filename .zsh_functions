@@ -1,0 +1,37 @@
+#!/bin/zsh
+
+# Create a new git branch with type prefix
+# Usage:
+#   gbe <type> <ticket> <description...>  # with ticket ID
+#   gbe <type> <description...>           # without ticket ID
+# Examples:
+#   gbe feat XAN-123 add user auth
+#   gbe fix test branch name
+function forkWithType() {
+  if [ $# -lt 2 ]; then
+    echo "Usage: gbe <type> <description...> [ticket]"
+    echo "Examples:"
+    echo "  gbe feat XAN-123 add user auth    # creates feat/XAN-123-add-user-auth"
+    echo "  gbe fix test branch name          # creates fix/test-branch-name"
+    return 1
+  fi
+
+  local type=$1
+  shift
+
+  # Check if second argument looks like a ticket (contains dash or numbers)
+  # Common patterns: XAN-123, JIRA-456, ABC-789, or just numbers like 123
+  if [[ $1 =~ ^[A-Za-z]+-[0-9]+$ ]] || [[ $1 =~ ^[0-9]+$ ]]; then
+    # Has ticket ID
+    local ticket=$(echo $1 | tr '[:lower:]' '[:upper:]')
+    shift
+    local description=$(echo "$@" | tr '[:upper:]' '[:lower:]' | tr ' ' '-')
+    git checkout -b "${type}/${ticket}-${description}"
+  else
+    # No ticket ID, all remaining args are description
+    local description=$(echo "$@" | tr '[:upper:]' '[:lower:]' | tr ' ' '-')
+    git checkout -b "${type}/${description}"
+  fi
+}
+
+alias gbe=forkWithType

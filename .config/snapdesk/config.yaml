@@ -1,7 +1,12 @@
 appShortcuts:
-- bundleIdentifier: com.apple.iCal
+- bundleIdentifier: com.apple.finder
   shortcut:
     key: f
+    modifiers:
+    - option
+- bundleIdentifier: com.apple.iCal
+  shortcut:
+    key: q
     modifiers:
     - option
 - bundleIdentifier: company.thebrowser.Browser
@@ -11,7 +16,7 @@ appShortcuts:
     - option
 - bundleIdentifier: com.googlecode.iterm2
   shortcut:
-    key: i
+    key: e
     modifiers:
     - option
 - bundleIdentifier: notion.id
@@ -34,18 +39,19 @@ appShortcuts:
     key: k
     modifiers:
     - option
-- bundleIdentifier: com.runningwithcrayons.Alfred
+- bundleIdentifier: org.alacritty.mini
   shortcut:
-    key: ''
-    modifiers: []
+    key: i
+    modifiers:
+    - option
+- bundleIdentifier: org.alacritty.code
+  shortcut:
+    key: j
+    modifiers:
+    - option
 - bundleIdentifier: com.bitwarden.desktop
   shortcut:
     key: b
-    modifiers:
-    - option
-- bundleIdentifier: com.apple.Safari
-  shortcut:
-    key: d
     modifiers:
     - option
 - bundleIdentifier: com.tinyspeck.slackmacgap
@@ -53,14 +59,19 @@ appShortcuts:
     key: l
     modifiers:
     - option
-- bundleIdentifier: net.whatsapp.WhatsApp
+- bundleIdentifier: com.apple.Safari
   shortcut:
-    key: w
+    key: d
     modifiers:
     - option
 - bundleIdentifier: com.microsoft.VSCode
   shortcut:
     key: v
+    modifiers:
+    - option
+- bundleIdentifier: net.whatsapp.WhatsApp
+  shortcut:
+    key: w
     modifiers:
     - option
 - bundleIdentifier: com.openai.chat
@@ -70,7 +81,11 @@ appShortcuts:
     - option
 - bundleIdentifier: com.postmanlabs.mac
   shortcut:
-    key: p
+    key: ''
+    modifiers: []
+- bundleIdentifier: ch.sudo.cyberduck
+  shortcut:
+    key: u
     modifiers:
     - option
 generalShortcuts:
@@ -96,11 +111,12 @@ generalShortcuts:
     - option
 - name: Focus Screen 3
   shortcut:
-    key: ''
-    modifiers: []
+    key: '3'
+    modifiers:
+    - option
 - name: Focus Screen 4
   shortcut:
-    key: "\e"
+    key: ''
     modifiers: []
 - name: Focus Screen 5
   shortcut:
@@ -114,20 +130,20 @@ generalShortcuts:
   shortcut:
     key: '1'
     modifiers:
-    - command
-    - shift
+    - option
+    - control
 - name: Throw to Screen 2
   shortcut:
     key: '2'
     modifiers:
-    - command
-    - shift
+    - option
+    - control
 - name: Throw to Screen 3
   shortcut:
     key: '3'
     modifiers:
-    - command
-    - shift
+    - option
+    - control
 - name: Throw to Screen 4
   shortcut:
     key: ''
@@ -142,10 +158,8 @@ generalShortcuts:
     modifiers: []
 - name: Throw app to current layout modifier
   shortcut:
-    key: t
-    modifiers:
-    - command
-    - option
+    key: ''
+    modifiers: []
 - name: Increase main panel size
   shortcut:
     key: y
@@ -158,7 +172,7 @@ generalShortcuts:
     - option
 - name: Expand Windows
   shortcut:
-    key: .
+    key: m
     modifiers:
     - option
 - name: Move Window Up in Layout
@@ -172,33 +186,81 @@ generalShortcuts:
     modifiers:
     - option
 - name: Show layout visualization
+- name: Position Window Left
   shortcut:
-    key: r
+    key: ','
     modifiers:
     - option
-- name: Position Window Left
+    - control
 - name: Position Window Right
+  shortcut:
+    key: /
+    modifiers:
+    - option
+    - control
 - name: Position Window Top
+  shortcut:
+    key: \
+    modifiers:
+    - option
+    - control
 - name: Position Window Bottom
+  shortcut:
+    key: .
+    modifiers:
+    - option
+    - control
+- name: Cycle Current App Backward
+- name: Directional Move Right
+  shortcut:
+    key: '7'
+    modifiers:
+    - option
+- name: Directional Move Up
+  shortcut:
+    key: '6'
+    modifiers:
+    - option
+- name: Directional Move Down
+  shortcut:
+    key: '5'
+    modifiers:
+    - option
 - name: Position Window Top Left
 - name: Position Window Top Right
 - name: Position Window Bottom Left
 - name: Position Window Bottom Right
 - name: Position Window Center
-- name: Cycle Current App Backward
-  shortcut:
-    key: u
-    modifiers:
-    - option
+- name: Directional Move Left
 windowPreview:
   enabled: true
-  maxWidth: 2e+2
-  maxHeight: 1.5e+2
+  maxWidth: 4e+2
+  maxHeight: 2.95e+2
   cacheTimeoutSeconds: 5e+0
 theme:
-  accentColorRed: 0e+0
-  accentColorGreen: 5e-1
+  accentColorRed: 7e-3
+  accentColorGreen: 4.78e-1
   accentColorBlue: 1e+0
   accentColorAlpha: 1e+0
-  activeWindowBorderWidth: 3e+0
-  inactiveWindowOpacity: 7e-1
+  activeWindowBorderWidth: 2e+0
+  inactiveWindowOpacity: 8.5e-1
+windowBehavior:
+  margins:
+    enabled: false
+    smart: false
+    size: 0e+0
+  minimumSize:
+    width: 2e+2
+    height: 1.5e+2
+  screenPadding:
+    left: 0e+0
+    right: 0e+0
+    top: 0e+0
+    bottom: 0e+0
+    disableOnBuiltinDisplay: false
+  ignoreMenuBar: false
+  floatSmallWindows: true
+  mouseFollowsFocus: false
+application:
+  launchAtLogin: true
+  showAllLayoutsOnToggle: true

@@ -5,19 +5,6 @@ Personal macOS development environment configuration files managed with symlinks
 ## What's Included
 
 ### 🚀 Neovim Configuration
-- **Modern Lua-based setup** with Lazy.nvim plugin manager
-- **30+ carefully selected plugins** including:
-  - LSP support (Mason, lspconfig) for multiple languages
-  - Advanced completion (nvim-cmp) with snippets
-  - File navigation (Telescope, Snacks picker)
-  - Git integration (Gitsigns, Lazygit)
-  - Syntax highlighting (Treesitter)
-  - Code formatting & linting (Conform, nvim-lint)
-  - AI assistance (GitHub Copilot)
-  - Modern UI (Noice, nvim-notify, Lualine)
-- **Custom keymaps** optimized for productivity
-- **Smart folding** with nvim-ufo
-- **Terminal integration** with Snacks terminal
 
 ### 🖥️ Terminal Setup
 - **Zsh configuration** with Oh My Zsh framework
@@ -39,7 +26,7 @@ Personal macOS development environment configuration files managed with symlinks
 ## Directory Structure
 
 ```
-~/dev/personal/dotfiles/
+~/dotfiles/
 ├── .config/
 │   ├── nvim/                    # Neovim configuration
 │   │   ├── init.lua            # Main entry point
@@ -56,7 +43,7 @@ Personal macOS development environment configuration files managed with symlinks
 ├── .tmux.conf                  # Tmux configuration
 ├── .oh-my-zsh/                 # Zsh framework
 ├── install.sh                  # Setup script
-├── uninstall.sh               # Cleanup script
+├── uninstall.sh                # Cleanup script
 └── README.md                   # This documentation
 ```
 
@@ -65,7 +52,7 @@ Personal macOS development environment configuration files managed with symlinks
 Run the install script to create symlinks from your home directory to this repository:
 
 ```bash
-cd ~/dev/personal/dotfiles
+cd ~/dotfiles
 ./install.sh
 ```
 
@@ -112,54 +99,3 @@ To track a new configuration file:
 ## Backup System
 
 The install script automatically creates timestamped backups in `~/dotfiles-backup-YYYYMMDD_HHMMSS/` before creating symlinks.
-
-## Key Features
-
-### Neovim Highlights
-- **Space as leader key** for intuitive shortcuts
-- **Telescope** for fuzzy finding files, buffers, and live grep
-- **LSP integration** with auto-completion and diagnostics
-- **Treesitter** for advanced syntax highlighting and text objects
-- **GitHub Copilot** for AI-powered code suggestions
-- **Lazy loading** for fast startup times
-- **Custom status line** with git integration and diagnostics
-
-### Zsh Productivity
-- **Smart aliases** for common git operations (`gaa`, `gcm`)
-- **Project shortcuts** for quick navigation between repositories
-- **Development environment** aliases (work and personal projects)
-- **NVM integration** for Node.js version management
-- **Zoxide integration** for intelligent directory jumping with `o` command
-
-### Tmux Workflow
-- **Vim-style navigation** between panes (hjkl)
-- **Prefix key**: `Ctrl+Space` (more ergonomic than Ctrl+b)
-- **Smart pane splitting** with `|` and `_`
-- **Mouse support** enabled for modern terminal usage
-- **Catppuccin theme** for consistent visual design
-
-## Git Workflow
-
-```bash
-# Make changes to your configs (they're automatically in the repo)
-cd ~/dev/personal/dotfiles
-
-# See what changed
-git status
-git diff
-
-# Commit changes
-git add .
-git commit -m "Update neovim config"
-git push
-```
-
-## Quick Start
-
-After installation, try these commands to explore the setup:
-- `nvim` - Open Neovim (try `:Lazy` to see plugins)
-- `<Space>ff` - Find files with Telescope (in Neovim)
-- `<Space>fg` - Live grep search (in Neovim)
-- `<Space>gg` - Open Lazygit (in Neovim)
-- `o <partial-name>` - Jump to directory with Zoxide
-- `tmux` - Start a tmux session with custom config

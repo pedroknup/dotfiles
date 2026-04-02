@@ -262,5 +262,5 @@ windowBehavior:
   floatSmallWindows: true
   mouseFollowsFocus: false
 application:
-  launchAtLogin: false
+  launchAtLogin: true
   showAllLayoutsOnToggle: true

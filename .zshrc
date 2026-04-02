@@ -66,8 +66,6 @@ export EDITOR='vim'
 DISABLE_AUTO_TITLE="true"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export LESS='-FRX'
-export PATH="$HOME/.basher/bin:$PATH"
-eval "$(basher init - zsh)"
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 # set -o vi

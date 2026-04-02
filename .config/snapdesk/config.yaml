@@ -34,9 +34,9 @@ appShortcuts:
     key: s
     modifiers:
     - option
-- bundleIdentifier: org.alacritty
+- bundleIdentifier: org.alacritty.assistant
   shortcut:
-    key: k
+    key: j
     modifiers:
     - option
 - bundleIdentifier: org.alacritty.mini
@@ -44,9 +44,9 @@ appShortcuts:
     key: i
     modifiers:
     - option
-- bundleIdentifier: org.alacritty.code
+- bundleIdentifier: org.alacritty
   shortcut:
-    key: j
+    key: k
     modifiers:
     - option
 - bundleIdentifier: com.bitwarden.desktop
@@ -175,16 +175,6 @@ generalShortcuts:
     key: m
     modifiers:
     - option
-- name: Move Window Up in Layout
-  shortcut:
-    key: h
-    modifiers:
-    - option
-- name: Move Window Down in Layout
-  shortcut:
-    key: g
-    modifiers:
-    - option
 - name: Show layout visualization
 - name: Position Window Left
   shortcut:
@@ -232,6 +222,16 @@ generalShortcuts:
 - name: Position Window Bottom Right
 - name: Position Window Center
 - name: Directional Move Left
+- name: Move Window Up in Layout
+  shortcut:
+    key: h
+    modifiers:
+    - option
+- name: Move Window Down in Layout
+  shortcut:
+    key: g
+    modifiers:
+    - option
 windowPreview:
   enabled: true
   maxWidth: 4e+2
@@ -262,5 +262,5 @@ windowBehavior:
   floatSmallWindows: true
   mouseFollowsFocus: false
 application:
-  launchAtLogin: true
+  launchAtLogin: false
   showAllLayoutsOnToggle: true
